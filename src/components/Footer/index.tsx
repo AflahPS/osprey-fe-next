@@ -1,7 +1,7 @@
-"use client"
+'use client';
 import { Divider, Grid, IconButton, Input, Typography } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Footer = () => {
@@ -9,12 +9,11 @@ const Footer = () => {
     <Grid
       container
       direction={'column'}
-      bgcolor={""}
     >
       <Grid
         item
         container
-        direction={"row"}
+        direction={'row'}
       >
         <Grid item>{'Logo'}</Grid>
         <Grid
@@ -25,6 +24,8 @@ const Footer = () => {
           <Grid
             item
             container
+            gap={3}
+            justifyContent={"center"}
           >
             <Grid item>
               <Link href={'#'}>
