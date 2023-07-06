@@ -15,8 +15,8 @@ body {
 body {
   color: #fefeff;
   background: linear-gradient(
-      to  right,
-      transparent,
+      to right,
+      #010a1f,
       #00112b
     )
     #010a1f;
