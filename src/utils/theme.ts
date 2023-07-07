@@ -7,6 +7,7 @@ interface CustomTheme {
       bgLight: string;
       borderLight: string;
       primaryLight: string;
+      secondaryLight: string;
       inputBg: string;
       fontRed: string;
       footerBg: string;
@@ -28,6 +29,7 @@ export const theme = createTheme({
       bgLight: '#00112b',
       borderLight: '#014d6a',
       primaryLight: '#00d9c5',
+      secondaryLight: '#35f2e1',
       inputBg: '#102437',
       fontRed: '#ec0d3e',
       footerBg: '#010718',
