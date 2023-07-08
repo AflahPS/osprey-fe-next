@@ -14,7 +14,7 @@ const AppLayout = (props: Props) => {
       <Grid item>
         <Navbar />
       </Grid>
-      <Grid item>{children}</Grid>
+      <Grid item paddingTop={8}>{children}</Grid>
       <Grid item>
         <Footer />
       </Grid>
