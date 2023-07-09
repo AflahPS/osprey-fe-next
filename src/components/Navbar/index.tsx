@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { theme } from '@/utils/theme';
+import { CyanButton } from '@/shared';
 
 interface Props {
   window?: () => Window;
@@ -36,7 +37,8 @@ export default function DrawerAppBar(props: Props) {
       sx={{ textAlign: 'center', color: theme.osprey.colors.fontWhite }}
     >
       <Typography
-        variant='h4'
+        fontSize={32}
+        fontFamily={'Quicksand'}
         fontWeight={400}
         sx={{ my: 2 }}
       >
@@ -49,7 +51,7 @@ export default function DrawerAppBar(props: Props) {
             key={item}
             disablePadding
           >
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center',  }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -71,9 +73,10 @@ export default function DrawerAppBar(props: Props) {
           justifyContent: 'space-between',
           alignItems: 'center',
           paddingX: 3,
-          backgroundColor: 'transparent',
+          backgroundColor: theme.osprey.colors.bgDark,
         }}
       >
+        {/* Nav-Left */}
         <Toolbar>
           <IconButton
             color='inherit'
@@ -89,9 +92,9 @@ export default function DrawerAppBar(props: Props) {
             alignItems={'center'}
           >
             <Typography
-              variant='h4'
-              fontWeight={400}
-              component='div'
+              fontSize={32}
+              fontFamily={'Quicksand'}
+              fontWeight={200}
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
               OSPREY
@@ -103,7 +106,7 @@ export default function DrawerAppBar(props: Props) {
               {navItems.map((item) => (
                 <Button
                   key={item}
-                  sx={{ color: theme.osprey.colors.fontWhite }}
+                  sx={{ color: theme.osprey.colors.fontWhite, textTransform: 'none' }}
                 >
                   {item}
                 </Button>
@@ -111,18 +114,16 @@ export default function DrawerAppBar(props: Props) {
             </Box>
           </Box>
         </Toolbar>
+        {/* Nav-Right */}
         <Box>
-          <Button
-            variant='outlined'
-            sx={{
-              backgroundColor: theme.osprey.colors.primaryLight,
-              color: theme.osprey.colors.bgDark,
-            }}
-          >
-            Book an Appointment
-          </Button>
+          <CyanButton
+            buttonText='Book For Call'
+            handleClick={() => {}}
+          />
         </Box>
       </AppBar>
+
+      {/* Drawer for mobile screen */}
       <Box component='nav'>
         <Drawer
           container={container}
