@@ -14,6 +14,7 @@ const Footer = () => {
         item
         container
         direction={'row'}
+        
       >
         <Grid item>{'Logo'}</Grid>
         <Grid
