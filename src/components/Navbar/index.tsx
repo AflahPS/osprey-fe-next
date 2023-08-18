@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,6 +16,7 @@ import Button from '@mui/material/Button';
 import { theme } from '@/utils/theme';
 import { CyanButton } from '@/shared';
 import { navItems } from '@/constants/vars';
+import { useStyles } from './styles';
 
 interface Props {
   window?: () => Window;
@@ -25,7 +26,8 @@ const drawerWidth = 240;
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const classes = useStyles()
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -67,13 +69,7 @@ export default function DrawerAppBar(props: Props) {
       <CssBaseline />
       <AppBar
         component='nav'
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          backgroundColor: theme.osprey.colors.bgDark,
-        }}
+        className={classes.appBar}
       >
         {/* Nav-Left */}
         <Toolbar>
