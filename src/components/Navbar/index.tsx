@@ -15,13 +15,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { theme } from '@/utils/theme';
 import { CyanButton } from '@/shared';
+import { navItems } from '@/constants/vars';
 
 interface Props {
   window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -72,7 +72,6 @@ export default function DrawerAppBar(props: Props) {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingX: 3,
           backgroundColor: theme.osprey.colors.bgDark,
         }}
       >
