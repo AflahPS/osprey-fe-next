@@ -10,7 +10,7 @@ interface Props {
 const AppLayout = (props: Props) => {
   const { children } = props;
   return (
-    <Grid container direction={"column"} minHeight={"100vh"} justifyContent={"space-between"}>
+    <Grid container direction={"column"} minHeight={"100vh"} justifyContent={"space-between"} paddingX={3}>
       <Grid item>
         <Navbar />
       </Grid>
