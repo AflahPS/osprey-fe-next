@@ -22,7 +22,7 @@ export const RightImagedHero = () => {
         ml={24}
       >
         <Grid item>
-          <Typography variant="h6">{`Small Header`}</Typography>
+          <Typography fontFamily={'Quicksand'} variant="h6">{`Small Header`}</Typography>
         </Grid>
 
         <Grid item>
@@ -32,8 +32,8 @@ export const RightImagedHero = () => {
         </Grid>
 
         <Grid item>
-          <Typography variant="h5">{`Something else`}</Typography>
-          <Typography variant="h5">{`Something more else`}</Typography>
+          <Typography fontFamily={'Quicksand'} variant="h5">{`Something else`}</Typography>
+          <Typography fontFamily={'Quicksand'} variant="h5">{`Something more else`}</Typography>
         </Grid>
 
         <Grid item>

@@ -1,8 +1,7 @@
-import { theme } from '@/utils/theme';
 import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-export const useStyles = makeStyles((defTheme: Theme) => ({
+export const useStyles = makeStyles((theme: Theme) => ({
   button: {
     backgroundColor: theme.osprey.colors.primaryLight,
     color: theme.osprey.colors.bgDark,
