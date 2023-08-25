@@ -12,6 +12,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.osprey.colors.bgDark,
       paddingRight: "24px",
       paddingLeft: "24px",
+      borderBottom: `1px solid ${theme.osprey.colors.primaryLight}`
     },
   })
 );
